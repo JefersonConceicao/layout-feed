@@ -1,4 +1,5 @@
 import styles from "./Post.module.css";
+import { useState } from "react";
 
 export function Post() {
   return (
@@ -37,6 +38,15 @@ export function Post() {
           </p>
         </p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong> Deixe seu feedback </strong>
+        <textarea placeholder="Deixe um comentário" />
+
+        <footer>
+          <button type="submit"> Publicar </button>
+        </footer>
+      </form>
     </article>
   );
 }
